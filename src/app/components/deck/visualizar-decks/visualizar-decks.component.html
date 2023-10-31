@@ -1,0 +1,23 @@
+<div class="container">
+    <mat-card>
+        <p>Quantidades de cartas por Tipo:</p>
+        <p *ngFor="let tipo of tipos">
+            {{tipo}} - {{quantidadeCartasPorSupertype(tipo)}}
+        </p>
+    </mat-card>
+
+    <mat-card class="container-energias">
+        <div>
+            Tipos de energia: {{tiposEnergia.length}}
+            <div>
+                <img *ngFor="let tipoEnergia of tiposEnergia" [src]="retornarCaminhoImagem(tipoEnergia)" />
+            </div>
+        </div>
+    </mat-card>
+
+    <div class="container-botoes">
+        <button mat-raised-button type="button" [routerLink]="['/decks']" routerLinkActive="router-link-active">Voltar</button>
+    </div>
+</div>
+
+<loader></loader>

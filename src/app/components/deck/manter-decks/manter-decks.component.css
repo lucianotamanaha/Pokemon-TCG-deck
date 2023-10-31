@@ -1,0 +1,64 @@
+.container {
+    margin: 5px;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 10px;
+}
+
+.container-cartas {
+    width: 70%;
+    display: flex;
+    flex-wrap: wrap;
+    float: left;
+}
+
+.container-botoes {
+    width: 100%;
+}
+
+.container-botoes button {
+    margin-left: 5px;
+}
+
+.container-dados-deck {
+    width: 30%;
+    max-height: 400px;
+    flex-wrap: nowrap;
+    float: right;
+}
+
+.filtro {
+    width: 98%;
+}
+
+.campos-container {
+    width: 100%;
+}
+
+.botes-quantidade {
+    float: right;
+}
+
+.botes-quantidade button {
+    margin-left: 3px;
+}
+
+.detalhes-carta {
+    margin-bottom: 10px;
+}
+
+.carta-selecionada {
+    border: 1px solid #333;
+    margin: 2px;
+    box-shadow: 0px 12px 22px 1px #333;
+}
+
+.container-botoes-form {
+    width: 100%;
+}
+
+.container-botoes-form button {
+    width: 49%;
+    margin-left: 5px;
+}

@@ -1,11 +1,7 @@
-
-<!-- Toolbar -->
 <mat-toolbar>
-  <span>Pokemon TCG deck</span>
+    <a [routerLink]="['/decks']">
+        <img routerLinkActive="router-link-active" src="../assets/images/logo-pokemon.png"  class="logo"/>
+    </a>
+    <p class="titulo">Pokemon TCG Deck</p>
 </mat-toolbar>
-
-<div class="content" role="main">
-
-  
-
 <router-outlet></router-outlet>
