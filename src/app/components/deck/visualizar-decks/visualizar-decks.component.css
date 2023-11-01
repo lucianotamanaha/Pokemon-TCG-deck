@@ -1,11 +1,142 @@
-.container {
+.container-all {
     margin: 5px;
+    width: 100%;
+    display: inline-block;
+    margin-top: 10px;
 }
 
-.container-energias {
-    margin-top: 10px;
+.container-cartas {
+    width: calc(100% - 16px);
+    display: flex;
+    flex-wrap: wrap;
+    float: left;
+}
+
+.container-cartas button {
+    float: right;
+}
+
+.card {
+    position: relative;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
 }
 
 .container-botoes {
-    margin-top: 10px;
+    width: calc(100% - 20px);
+    padding: 0 10px;
+}
+
+.container-botoes button {
+    margin-left: 10px;
+    float: right;
+}
+
+.container-dados-deck {
+    width: 190px;
+    flex-wrap: nowrap;
+    float: right;
+    margin-right: 10px;
+}
+
+.filtro {
+    width: calc(100% - 5px);
+}
+
+.campos-container {
+    width: 100%;
+}
+
+.botes-quantidade {
+    float: right;
+}
+
+.botes-quantidade button {
+    margin-left: 3px;
+}
+
+.detalhes-carta {
+    margin-bottom: 10px;
+}
+
+.carta-selecionada mat-card {
+    background-color: #4b4b4b;
+}
+
+.container-botoes-form {
+    width: calc(100% - 10px);
+    margin-bottom: 5px;
+}
+
+.container-botoes-form button {
+    width: 100%;
+    margin-left: 5px;
+}
+
+.card-columns {
+    width: calc(100% - 5px);
+    column-gap: 10px;
+}
+
+.card-columns .card {
+    margin-bottom: 12px !important;
+}
+
+.mat-badge {
+    color: whitesmoke;
+    margin: 12px;
+    display: inline-block;
+    font-size: .9rem;
+}
+
+.mdc-list-item.mdc-list-item--with-one-line {
+    height: auto;
+    padding: 5px 10px 5px 0;
+}
+
+@media (min-width: 420px) {
+    .card-columns {
+        column-count: 2;
+        orphans: 2;
+        widows: 2 !important;
+    }
+}
+
+@media (min-width: 576px) {
+    .card-columns .card {
+        display: inline-block;
+        width: 100%;
+    }
+
+    .card-columns {
+        column-count: 3;
+        orphans: 4;
+        widows: 4;
+    }
+}
+
+@media (min-width: 796px) {
+    .card-columns {
+        column-count: 3;
+        orphans: 4;
+        widows: 4;
+    }
+}
+
+@media (min-width: 966px) {
+    .card-columns {
+        column-count: 4;
+        orphans: 1;
+        widows: 1;
+    }
+}
+
+@media (min-width: 1200px) {
+    .card-columns {
+        column-count: 5;
+        orphans: 1;
+        widows: 1;
+        width: calc(100% - 5px)
+    }
 }

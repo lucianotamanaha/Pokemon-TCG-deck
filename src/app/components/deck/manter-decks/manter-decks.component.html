@@ -1,22 +1,4 @@
 <div class="container-all">
-    <div class="container-cartas">
-        <mat-form-field class="filtro">
-            <mat-label>Pesquisa</mat-label>
-            <input matInput [(ngModel)]="pesquisa" (keyup)="filtrarCartas()">
-        </mat-form-field>
-        <div class="card-columns">
-            <div class="card" *ngFor="let carta of cartas" [ngClass]="cartaSelecionada(carta)">
-                
-                <mat-card>
-                    <exibicao-cartas [carta]="carta"></exibicao-cartas>
-                    <mat-card-actions align="end">
-                        <button mat-button (click)="adicionarCarta(carta)">Adicionar card</button>
-                      </mat-card-actions>
-                </mat-card>
-            </div>
-        </div>
-    </div>
-
     <div class="container-dados-deck">
         <mat-card>
             <div>
@@ -55,6 +37,23 @@
                 </form>
             </div>
         </mat-card>
+    </div>
+    <div class="container-cartas">
+        <mat-form-field class="filtro">
+            <mat-label>Pesquisa</mat-label>
+            <input matInput [(ngModel)]="pesquisa" (keyup)="filtrarCartas()">
+        </mat-form-field>
+        <div class="card-columns">
+            <div class="card" *ngFor="let carta of cartas" [ngClass]="cartaSelecionada(carta)">
+                
+                <mat-card>
+                    <exibicao-cartas [carta]="carta"></exibicao-cartas>
+                    <mat-card-actions align="end">
+                        <button mat-button (click)="adicionarCarta(carta)">Adicionar card</button>
+                      </mat-card-actions>
+                </mat-card>
+            </div>
+        </div>
     </div>
 </div>
 

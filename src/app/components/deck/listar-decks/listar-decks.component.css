@@ -26,7 +26,11 @@ mat-form-field {
     margin: 10px 10px 0;
 }
 
-button {
+.button-header button {
  float: right;
  margin: 24px 10px;
+}
+
+.mat-mdc-button>.mat-icon{
+    margin-right: 0;
 }
