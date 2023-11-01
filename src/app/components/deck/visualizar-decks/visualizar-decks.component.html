@@ -1,0 +1,17 @@
+<div class="container-all">
+    <div class="container-botoes">
+        <span class="cartas-quantidade" [matBadge]="retornarQuantidadeTotalCartas()" matBadgeOverlap="false" class="demo-section" *ngIf="deck.cartas.length > 0">Cartas no Deck</span>
+        <button type="button" [routerLink]="['/decks']" mat-raised-button routerLinkActive="router-link-active">Voltar</button>
+    </div>
+    <div class="container-cartas">
+        <div class="card-columns">
+            <div class="card" *ngFor="let carta of deck.cartas">
+                <mat-card>
+                    <exibicao-cartas [carta]="carta" [matBadge]="carta.quantidade" matBadgeOverlap="false" class="demo-section"></exibicao-cartas>
+                </mat-card>
+            </div>
+        </div>
+    </div>
+</div>
+
+<loader></loader>
