@@ -9,3 +9,24 @@ table {
 table button {
     margin-left: 3px;
 }
+
+mat-grid-tile {
+    background: #303030;
+    border: none;
+    padding: 10px;
+}
+
+.button-header{
+    background: #303030;
+    overflow: hidden
+}
+
+mat-form-field {
+    float: left;
+    margin: 10px 10px 0;
+}
+
+button {
+ float: right;
+ margin: 24px 10px;
+}

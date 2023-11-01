@@ -1,16 +1,22 @@
-.container {
+.container-all {
     margin: 5px;
     width: 100%;
-    display: flex;
-    flex-wrap: wrap;
+    display: inline-block;
     margin-top: 10px;
 }
 
 .container-cartas {
-    width: 70%;
+    width: calc(100% - 200px);
     display: flex;
     flex-wrap: wrap;
     float: left;
+}
+
+.card {
+    position: relative;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
 }
 
 .container-botoes {
@@ -22,14 +28,14 @@
 }
 
 .container-dados-deck {
-    width: 30%;
-    max-height: 400px;
+    width: 190px;
     flex-wrap: nowrap;
     float: right;
+    margin-right: 10px;
 }
 
 .filtro {
-    width: 98%;
+    width: calc(100% - 5px);
 }
 
 .campos-container {
@@ -48,17 +54,83 @@
     margin-bottom: 10px;
 }
 
-.carta-selecionada {
-    border: 1px solid #333;
-    margin: 2px;
-    box-shadow: 0px 12px 22px 1px #333;
+.carta-selecionada mat-card {
+    background-color: #4b4b4b;
 }
 
 .container-botoes-form {
-    width: 100%;
+    width: calc(100% - 10px);
+    margin-bottom: 5px;
 }
 
 .container-botoes-form button {
-    width: 49%;
+    width: 100%;
     margin-left: 5px;
+}
+
+.card-columns {
+    width: calc(100% - 5px);
+    column-gap: 10px;
+}
+
+.card-columns .card {
+    margin-bottom: 12px !important;
+}
+
+.mat-badge {
+    color: grey;
+    margin: 10px;
+    display: inline-block;
+    font-size: .9rem;
+}
+
+.mdc-list-item.mdc-list-item--with-one-line {
+    height: auto;
+    padding: 5px 10px 5px 0;
+}
+
+@media (min-width: 420px) {
+    .card-columns {
+        column-count: 2;
+        orphans: 2;
+        widows: 2 !important;
+    }
+}
+
+@media (min-width: 576px) {
+    .card-columns .card {
+        display: inline-block;
+        width: 100%;
+    }
+
+    .card-columns {
+        column-count: 3;
+        orphans: 4;
+        widows: 4;
+    }
+}
+
+@media (min-width: 796px) {
+    .card-columns {
+        column-count: 3;
+        orphans: 4;
+        widows: 4;
+    }
+}
+
+@media (min-width: 966px) {
+    .card-columns {
+        column-count: 3;
+        orphans: 1;
+        widows: 1;
+    }
+}
+
+@media (min-width: 1200px) {
+    .card-columns {
+        column-count: 5;
+        orphans: 1;
+        widows: 1;
+        width: calc(100% - 5px)
+    }
 }

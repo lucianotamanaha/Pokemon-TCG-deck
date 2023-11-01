@@ -3,6 +3,10 @@ import { NgModule } from '@angular/core';
 
 import { LoaderModule } from '../../shared/loader/loader.module';
 import { ExibicaoCartasComponent } from './exibicao-cartas.component';
+import {MatCardModule} from '@angular/material/card';
+import {MatGridListModule} from '@angular/material/grid-list';
+import {MatExpansionModule} from '@angular/material/expansion';
+
 
 @NgModule({
   declarations: [
@@ -13,9 +17,12 @@ import { ExibicaoCartasComponent } from './exibicao-cartas.component';
   ],
   imports: [
     CommonModule,
-    LoaderModule
+    LoaderModule,
+    MatCardModule,
+    MatGridListModule,
+    MatExpansionModule
   ],
   providers: [],
   bootstrap: [ExibicaoCartasComponent]
 })
-export class ExibicaoCartaModule { }
+export class ExibicaoCartaModule  {}

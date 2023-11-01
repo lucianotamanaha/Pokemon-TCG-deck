@@ -1,3 +1,35 @@
-<img [src]="carta.imageUrl">
-<p>teste</p>
-<loader></loader>
+        <mat-card-header>
+            <div mat-card-avatar class="header-image" [ngStyle]="{backgroundImage: 'url(' + carta.imageUrl + ')'}"></div>
+            <mat-card-title>{{carta.name}}</mat-card-title>
+            <mat-card-subtitle>{{carta.rarity}}</mat-card-subtitle>
+        </mat-card-header>
+        
+        <mat-card-content>
+          <img [src]="carta.imageUrlHiRes">
+            <mat-accordion>
+                <mat-expansion-panel (opened)="panelOpenState = true"
+                                     (closed)="panelOpenState = false">
+                  <mat-expansion-panel-header>
+                    <mat-panel-title>
+                      Mais detalhes
+                    </mat-panel-title>
+                  </mat-expansion-panel-header>
+                  <mat-grid-list cols="2" rowHeight="30px">
+                    <mat-grid-tile>Series:</mat-grid-tile>
+                    <mat-grid-tile>{{carta.series}}</mat-grid-tile>
+                    <mat-grid-tile>Set:</mat-grid-tile>
+                    <mat-grid-tile>{{carta.set}}</mat-grid-tile>
+                    <mat-grid-tile>Subtype:</mat-grid-tile>
+                    <mat-grid-tile>{{carta.subtype}}</mat-grid-tile>
+                    <mat-grid-tile>Supertype:</mat-grid-tile>
+                    <mat-grid-tile>{{carta.supertype}}</mat-grid-tile>
+                    <mat-grid-tile>Artist:</mat-grid-tile>
+                    <mat-grid-tile>{{carta.artist}}</mat-grid-tile>
+                    <mat-grid-tile>Evolves From:</mat-grid-tile>
+                    <mat-grid-tile>{{carta.evolvesFrom}}</mat-grid-tile>
+                    <mat-grid-tile>HP:</mat-grid-tile>
+                    <mat-grid-tile>{{carta.hp}}</mat-grid-tile>
+                  </mat-grid-list>
+                </mat-expansion-panel>
+              </mat-accordion>
+        </mat-card-content>

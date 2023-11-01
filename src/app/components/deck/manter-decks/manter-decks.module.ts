@@ -14,6 +14,10 @@ import { LoaderModule } from '../../shared/loader/loader.module';
 import { ModalConfirmacaoModule } from '../../shared/modal-confirmacao/modal-confirmacao.module';
 import { ManterDecksRoutingModule } from './manter-decks-routing.module';
 import { ManterDecksComponent } from './manter-decks.component';
+import {MatGridListModule} from '@angular/material/grid-list';
+import {MatBadgeModule} from '@angular/material/badge';
+import {MatListModule} from '@angular/material/list';
+import {MatChipsModule} from '@angular/material/chips';
 
 @NgModule({
   declarations: [
@@ -32,7 +36,11 @@ import { ManterDecksComponent } from './manter-decks.component';
     ExibicaoCartaModule,
     LoaderModule,
     ModalConfirmacaoModule,
-    ManterDecksRoutingModule
+    ManterDecksRoutingModule,
+    MatGridListModule,
+    MatBadgeModule,
+    MatListModule,
+    MatChipsModule
   ],
   providers: [],
   bootstrap: [
